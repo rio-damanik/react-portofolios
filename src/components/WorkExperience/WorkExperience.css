@@ -1,0 +1,19 @@
+.work-experience-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding and borders are included in the width/height calculations */
+  width: 100%; /* Ensure the container takes up the full width */
+  background-color: #000;
+  color: black; /* Default text color for the container */
+}
+
+.work-experience-container h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff; /* Specific color for the h2 element */
+}

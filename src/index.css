@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* index.css or App.css */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* index.css */
+body {
+  background-color: black; /* Sets the background color to black */
+  color: white; /* Optional: Sets text color to white for better contrast */
+  margin: 0; /* Optional: Removes default margin */
+  font-family: Arial, sans-serif; /* Optional: Sets a default font family */
+}

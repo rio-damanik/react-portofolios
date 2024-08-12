@@ -1,0 +1,114 @@
+.work-experience-container {
+  padding: 30px;
+  background-color: #f9f9f9;
+  position: relative; /* Make the container position relative for positioning the buttons */
+}
+
+.work-experience-container h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.experience-cards {
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  gap: 20px; /* Space between cards */
+  padding: 10px 0;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  flex-wrap: nowrap; /* Ensure items are in a single row */
+  position: relative; /* Make the container position relative for positioning the buttons */
+}
+
+.experience-card {
+  background-color: #5a37af;
+  border: 2px solid #4a148c; /* Dark purple border */
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 600px; /* Set a fixed width for cards */
+  flex: none; /* Prevent flex items from growing */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.profession {
+  font-size: 1.5rem;
+  color: #fdfcff; /* Dark purple text color */
+  margin: 0;
+}
+
+.years {
+  font-size: 1rem;
+  color: #fdfcff;
+  margin: 5px 0;
+}
+
+.place {
+  font-size: 1rem;
+  color: #fdfcff;
+  margin: 5px 0;
+}
+
+.job-desk {
+  display: flow;
+  list-style-type: disc; /* Bullet points */
+  padding-left: 20px; /* Indent list items */
+  font-size: 0.9rem;
+  color: #fdfcff;
+  margin: 0;
+}
+
+.job-desk-item {
+  margin-bottom: 10px; /* Space between items */
+}
+
+/* Style for scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #4a148c; /* Dark purple background */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  z-index: 10; /* Ensure buttons are above content */
+}
+
+.scroll-btn:hover {
+  background-color: #3a0a6b; /* Darker purple on hover */
+}
+
+/* Position buttons */
+.scroll-btn.left {
+  margin-top: 30px;
+  left: 0;
+  width: 40px;
+  height: 50px;
+}
+
+.scroll-btn.right {
+  margin-top: 30px;
+  right: 0;
+  width: 40px;
+  height: 50px;
+}
+
+/* Hide scroll buttons on smaller screens */
+@media (max-width: 750px) {
+  .scroll-btn {
+    display: none;
+  }
+}

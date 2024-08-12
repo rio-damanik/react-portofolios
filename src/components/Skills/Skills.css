@@ -1,0 +1,117 @@
+.skills-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.skills-container h5 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skills-content-container {
+  display: flex;
+  width: 100%;
+}
+
+.skills-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-section {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.skills-section.active {
+  border: 2px solid #4a148c; /* Dark purple border */
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #000;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.skills-icon {
+  width: 40px;
+  height: auto;
+  margin-right: 15px;
+  background: #ffffff;
+}
+
+.skills-header h6 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.skills-display {
+  flex: 2;
+  padding: 15px;
+  border: 1px solid #4a148c; /* Dark purple border */
+  border-radius: 8px;
+  background-color: #b375af;
+  margin-left: 20px;
+  display: none; /* Hide by default */
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-display.show {
+  display: block;
+  padding: 20px; /* Show when category is active */
+}
+
+.skills-display-content {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+}
+
+.skill-card {
+  flex: 1 1 200px; /* Adjust the size of each SkillCard */
+  max-width: 200px; /* Set maximum width to avoid it being too large */
+  margin-bottom: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.skill-card-icon {
+  width: 30px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.close-btn {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  width: 100px; /* Set width to 100px */
+  height: 50px; /* Set height to 50px */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px; /* Space above the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  background-color: #cc0000;
+}

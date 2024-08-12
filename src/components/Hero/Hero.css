@@ -1,0 +1,108 @@
+/* Hero Section Container */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: #000000; /* Dark background color */
+  min-height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Include padding in width and height calculations */
+}
+
+/* Content on the Left Side */
+.hero-content {
+  flex: 1.5; /* Increased flex value for more space */
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px; /* Space between content and image */
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text color */
+  text-align: left; /* Align text to the left */
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #e0e0e0; /* Light gray text color */
+  text-align: left; /* Align text to the left */
+}
+
+/* Container for Hero Image and Tech Icons */
+.hero-img {
+  flex: 1; /* Adjusted to be less than .hero-content */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 20px; /* Space between images */
+}
+
+.hero-img img {
+  width: 70%; /* Hero image size */
+  max-width: 600px; /* Maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Container for Tech Icons */
+.hero-img div {
+  display: flex;
+  flex-direction: row; /* Align icons in a row */
+  gap: 15px; /* Space between tech icons */
+  justify-content: center; /* Center the icons horizontally */
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center; /* Center image vertically within the container */
+  justify-content: center; /* Center image horizontally within the container */
+  border: 3px solid rgba(0, 0, 255, 0.3); /* Blue border with semi-dark effect */
+  border-radius: 0%; /* Make the border round */
+  padding: 5px; /* Padding around the image */
+  background-color: rgba(0, 0, 255, 0.1); /* Semi-transparent blue background */
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.2); /* Subtle blue shadow */
+}
+
+.tech-icon img {
+  width: 50px; /* Size of tech icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjust layout for mobile view */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center; /* Center all items horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .hero-content {
+    flex: none; /* Prevent it from growing */
+    padding-right: 0; /* Remove extra padding on smaller screens */
+    max-width: 100%; /* Allow it to use full width */
+    margin-bottom: 20px; /* Space between content and image */
+    text-align: justify;
+  }
+
+  .hero-content h2 {
+    text-align: center;
+  }
+
+  .hero-content p {
+    text-align: center;
+  }
+
+  .hero-img {
+    flex-direction: column; /* Stack images in a column on smaller screens */
+    gap: 10px;
+    justify-content: center; /* Center the images */
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 300px; /* Adjust for smaller screens */
+  }
+}

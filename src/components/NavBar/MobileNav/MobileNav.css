@@ -1,0 +1,68 @@
+/* Styles for the mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust width as needed */
+  height: 100%;
+  background-color: #5231cc; /* Purple background */
+  color: #ffffff; /* White text */
+  z-index: 1000;
+  transform: translateX(-100%); /* Initially off-screen */
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+  transform: translateX(0); /* Slide into view */
+}
+
+.mobile-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.mobile-menu .logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu .menu-item {
+  display: block;
+  margin: 15px 0;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.mobile-menu .menu-item:hover {
+  text-decoration: underline;
+}
+
+.hire-btn {
+  background-color: #ffffff; /* White background for the button */
+  color: #5231cc; /* Purple text for the button */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hire-btn:hover {
+  background-color: #7e61e7; /* Darker purple background */
+  color: #ffffff; /* White text on hover */
+}

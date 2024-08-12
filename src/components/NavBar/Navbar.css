@@ -1,0 +1,121 @@
+/* Navbar Container */
+.nav-wrapper {
+  background-color: #060417;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Logo */
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+/* Desktop Menu */
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  gap: 30px;
+  transition: all 0.3s ease;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 200;
+  position: relative;
+}
+
+.contact-btn {
+  background-color: #5231cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact-btn:hover {
+  background-color: #7e61e7;
+}
+
+.menu-item::before {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: linear-gradient(#a993fe 0%, #7e61e7 100%);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: -0.6rem;
+  opacity: 0;
+  transform: translateX(-1.5rem);
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover::before {
+  width: 100%;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: none; /* Initially hidden */
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  background: linear-gradient(98deg, #a993fe 0%, #7e61e7 100%);
+  line-height: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.menu-btn:hover {
+  color: #a993fe;
+  background: #000;
+  border: 1px solid #a993fe;
+}
+
+/* Media Query for width 750px and below */
+@media (max-width: 750px) {
+  ul {
+    display: none; /* Hide the menu items */
+  }
+
+  .menu-btn {
+    display: flex; /* Show the menu button */
+  }
+
+  .nav-content {
+    justify-content: space-between; /* Adjust layout */
+  }
+}
+
+/* Media Query for width above 750px */
+@media (min-width: 751px) {
+  ul {
+    display: flex; /* Show the menu items */
+  }
+
+  .menu-btn {
+    display: none; /* Hide the menu button */
+  }
+}
