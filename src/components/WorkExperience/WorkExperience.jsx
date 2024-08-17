@@ -25,28 +25,10 @@ const WorkExperience = () => {
 
   const experiences = [
     {
-      profession: "Software Engineer",
-      place: "PT Abadi",
-      years: "2018 - 2022",
+      profession: "Production Operator",
+      place: "PT Goodyear Indonesia",
+      years: "2022 - 2024",
       jobDesk: ["Developed web applications", "Led a team of developers", "Worked closely with clients to understand their needs"],
-    },
-    {
-      profession: "UI/UX Designer",
-      place: "Design Studio",
-      years: "2016 - 2018",
-      jobDesk: ["Designed user interfaces for various applications", "Conducted user research", "Created wireframes and prototypes"],
-    },
-    {
-      profession: "Software Engineer",
-      place: "Tech Solutions",
-      years: "2018 - 2022",
-      jobDesk: ["Developed web applications", "Led a team of developers", "Worked closely with clients to understand their needs"],
-    },
-    {
-      profession: "UI/UX Designer",
-      place: "Creative Agency",
-      years: "2016 - 2018",
-      jobDesk: ["Designed user interfaces for various applications", "Conducted user research", "Created wireframes and prototypes"],
     },
   ];
 

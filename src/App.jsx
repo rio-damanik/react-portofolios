@@ -6,6 +6,7 @@ import Skills from "./components/Skills/Skills";
 import WorkExperience from "./components/WorkExperience/WorkExperience";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Footer from "./components/Footer/footer";
+import AboutMe from "./components/About/AboutMe";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Navbar />
       <div className="container">
         <Hero />
+        <AboutMe />
         <Skills />
         <WorkExperience />
         <ContactMe />
