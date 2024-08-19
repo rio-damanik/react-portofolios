@@ -1,28 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
+import Slider from "react-slick";
 import ExperienceCard from "./ExperienceCard/ExperienceCard";
+import { NextArrow, PrevArrow } from "./CustomArrows"; // Import custom arrows
 import "./WorkExperience.css";
 
 const WorkExperience = () => {
-  const experienceContainerRef = useRef(null);
-
-  const scrollLeft = () => {
-    if (experienceContainerRef.current) {
-      experienceContainerRef.current.scrollBy({
-        left: -200, // Adjust the scroll distance as needed
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (experienceContainerRef.current) {
-      experienceContainerRef.current.scrollBy({
-        left: 200, // Adjust the scroll distance as needed
-        behavior: "smooth",
-      });
-    }
-  };
-
   const experiences = [
     {
       profession: "Helper Production",
@@ -44,20 +26,24 @@ const WorkExperience = () => {
     },
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1, // Show one slide at a time
+    slidesToScroll: 1, // Scroll one slide at a time
+    nextArrow: <NextArrow />, // Use custom right arrow
+    prevArrow: <PrevArrow />, // Use custom left arrow
+  };
+
   return (
     <section className="work-experience-container">
       <h2>Work Experience</h2>
-      <button className="scroll-btn left" onClick={scrollLeft}>
-        ←
-      </button>
-      <button className="scroll-btn right" onClick={scrollRight}>
-        →
-      </button>
-      <div className="experience-cards" ref={experienceContainerRef}>
+      <Slider {...settings} className="experience-cards">
         {experiences.map((exp, index) => (
           <ExperienceCard key={index} profession={exp.profession} place={exp.place} years={exp.years} jobDesk={exp.jobDesk} />
         ))}
-      </div>
+      </Slider>
     </section>
   );
 };

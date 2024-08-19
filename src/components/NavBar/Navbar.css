@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -29,6 +29,7 @@ ul {
   padding: 0;
   gap: 30px;
   transition: all 0.3s ease;
+  font-size: larger;
 }
 
 .menu-item {

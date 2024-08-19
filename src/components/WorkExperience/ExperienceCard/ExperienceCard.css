@@ -24,10 +24,9 @@
   background-color: #5a37af;
   border: 2px solid #4a148c; /* Dark purple border */
   border-radius: 8px;
-  padding: 20px 30px;
+  padding: 20px 80px;
   margin: 15px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 600px; /* Set a fixed width for cards */
   flex: none; /* Prevent flex items from growing */
   display: flex;
   flex-direction: column;

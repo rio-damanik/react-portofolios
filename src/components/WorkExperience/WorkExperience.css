@@ -1,3 +1,24 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.work-experience-container {
+  position: relative;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000; /* Adjust arrow color */
+}
+
+.experience-cards {
+  padding: 20px 0;
+  width: 100%; /* Ensure the slider takes up the full width */
+  overflow-x: hidden; /* Hide the horizontal scrollbar */
+  overflow-y: hidden; /* Hide the vertical scrollbar */
+}
+
 section.work-experience-container {
   padding: 6rem;
 }

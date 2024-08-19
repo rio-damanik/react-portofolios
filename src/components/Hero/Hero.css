@@ -29,6 +29,12 @@ section.hero-container {
   color: #ffffff; /* White text color */
   text-align: left; /* Align text to the left */
 }
+.hero-content h3 {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text color */
+  text-align: left; /* Align text to the left */
+}
 
 .hero-content p {
   font-size: 1.2rem;
