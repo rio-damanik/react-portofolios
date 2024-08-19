@@ -4,8 +4,9 @@ export const SKILLS = [
     icon: "../assest/images/icon-front.png",
     skills: [
       { skill: "HTML5", icon: "../assest/images/icon-html.png" }, // Local image
-      { skill: "CSS3 (Sass/SCSS)", icon: "../assest/images/icon-css.png" }, // Local image
+      { skill: "CSS", icon: "../assest/images/icon-css.png" }, // Local image
       { skill: "JavaScript", icon: "../assest/images/icon-js.png" }, // Local image
+      { skill: "TypeScript", icon: "../assest/images/icon-typescript.png" }, // Local image
       { skill: "React.js", icon: "../assest/images/icon-react.png" }, // Local image
     ],
   },

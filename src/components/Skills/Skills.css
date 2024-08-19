@@ -1,3 +1,9 @@
+section.skills-container {
+  padding: 2rem 7rem;
+  background: #000;
+  color: #ffffff;
+}
+
 .skills-container {
   padding: 30px;
   display: flex;

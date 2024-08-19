@@ -7,17 +7,20 @@ import WorkExperience from "./components/WorkExperience/WorkExperience";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Footer from "./components/Footer/footer";
 import AboutMe from "./components/About/AboutMe";
+import "bootstrap/dist/css/bootstrap.css";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <div className="container">
-        <Hero />
-        <AboutMe />
-        <Skills />
-        <WorkExperience />
-        <ContactMe />
+      <div className="container-fluid">
+        <div className="row">
+          <Hero />
+          <AboutMe />
+          <Skills />
+          <WorkExperience />
+          <ContactMe />
+        </div>
       </div>
       <Footer />
     </>

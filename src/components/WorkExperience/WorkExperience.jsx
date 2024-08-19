@@ -25,10 +25,22 @@ const WorkExperience = () => {
 
   const experiences = [
     {
+      profession: "Helper Production",
+      place: "PT OCS Global Services - Freelance",
+      years: "2024 - Sekarang",
+      jobDesk: ["Menjalankan kegiatan produksi sesuai SOP dan Standar K3", "Melakukan Produksi dengan membantu proses yang ada baik secara individu dan Tim"],
+    },
+    {
       profession: "Production Operator",
-      place: "PT Goodyear Indonesia",
+      place: "PT Goodyear Indonesia - Internship",
       years: "2022 - 2024",
-      jobDesk: ["Developed web applications", "Led a team of developers", "Worked closely with clients to understand their needs"],
+      jobDesk: ["Mengoperasi mesin produksi sesuai SOP dan Standar K3", "Melakukan pengecekan Mesin secara berkala bersama Tim developers", "Melakukan pengendalian mutu pada kualitas hasil Produksi dan meningkatkan produktivitas pabrik"],
+    },
+    {
+      profession: "Quality Technician",
+      place: "PT Goodyear Indonesia - Internship",
+      years: "2023",
+      jobDesk: ["Menganalisis data kinerja kualitas dari proses produksi dan produk akhir", "Menjaga kinerja sistem manajemen mutu sesuai standar"],
     },
   ];
 

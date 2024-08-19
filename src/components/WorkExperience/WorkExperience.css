@@ -1,3 +1,6 @@
+section.work-experience-container {
+  padding: 6rem;
+}
 .work-experience-container {
   display: flex;
   flex-direction: row;

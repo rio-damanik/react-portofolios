@@ -1,3 +1,7 @@
+section.hero-container {
+  padding: 6rem;
+}
+
 /* Hero Section Container */
 .hero-container {
   display: flex;
@@ -42,7 +46,7 @@
 }
 
 .hero-img img {
-  width: 70%; /* Hero image size */
+  width: 50%; /* Hero image size */
   max-width: 600px; /* Maximum width */
   height: auto; /* Maintain aspect ratio */
 }
