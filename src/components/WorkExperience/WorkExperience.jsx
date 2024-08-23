@@ -37,7 +37,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <section className="work-experience-container">
+    <section id="work-experience" className="work-experience-container">
       <h2>Work Experience</h2>
       <Slider {...settings} className="experience-cards">
         {experiences.map((exp, index) => (

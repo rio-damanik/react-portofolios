@@ -1,8 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Container */
 /* Navbar Container */
 .nav-wrapper {
   background-color: #060417;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
+  position: fixed; /* Make navbar fixed at the top */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar is above other content */
 }
 
 .nav-content {
@@ -12,6 +21,10 @@
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+body {
+  margin-top: 80px; /* Add top margin equal to navbar height to avoid content overlap */
 }
 
 /* Logo */

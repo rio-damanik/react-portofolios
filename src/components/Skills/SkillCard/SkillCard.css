@@ -34,3 +34,7 @@
 .skill-item span {
   font-size: 16px;
 }
+
+.skill-card h4 {
+  font-size: 1rem;
+}

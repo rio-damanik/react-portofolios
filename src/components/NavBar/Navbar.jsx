@@ -34,23 +34,28 @@ const Navbar = () => {
 
           <ul>
             <li>
-              <a className="menu-item" href="#home">
+              <a className="menu-item" href="#Hero">
                 Home
               </a>
             </li>
             <li>
-              <a className="menu-item" href="#About">
+              <a className="menu-item" href="#AboutMe">
                 About
               </a>
             </li>
             <li>
-              <a className="menu-item" href="#skill">
+              <a className="menu-item" href="#skills">
                 Skill
               </a>
             </li>
             <li>
               <a className="menu-item" href="#work-experience">
                 Work Experience
+              </a>
+            </li>
+            <li>
+              <a className="menu-item" href="project-me">
+                Project
               </a>
             </li>
             <li>

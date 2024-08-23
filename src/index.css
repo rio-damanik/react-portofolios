@@ -15,3 +15,6 @@ body {
   margin: 0; /* Optional: Removes default margin */
   font-family: Arial, sans-serif; /* Optional: Sets a default font family */
 }
+html {
+  scroll-behavior: smooth;
+}
