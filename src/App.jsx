@@ -7,6 +7,7 @@ import WorkExperience from "./components/WorkExperience/WorkExperience";
 import ContactMe from "./components/ContactMe/ContactMe";
 import Footer from "./components/Footer/footer";
 import AboutMe from "./components/About/AboutMe";
+import ProjectMe from "./components/ProjectMe/ProjectMe";
 import "bootstrap/dist/css/bootstrap.css";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <AboutMe />
           <Skills />
           <WorkExperience />
+          <ProjectMe />
           <ContactMe />
         </div>
       </div>
