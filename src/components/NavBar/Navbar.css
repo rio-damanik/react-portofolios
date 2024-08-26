@@ -42,7 +42,7 @@ ul {
   padding: 0;
   gap: 30px;
   transition: all 0.3s ease;
-  font-size: larger;
+  font-size: medium;
 }
 
 .menu-item {
