@@ -3,13 +3,16 @@ import "./Hero.css";
 
 const Hero = () => {
   return (
-    <section id="Hero" className="hero-container">  {/* ID ditambahkan di sini */}
+    <section id="Hero" className="hero-container">
+      {" "}
+      {/* ID ditambahkan di sini */}
       <div className="hero-content">
-        <h2>RIO DAMANIK</h2>
-        <h3>Building Digital Experiences That Inspire</h3>
-        <p>Passionate Helper Production | Transforming Web Developer</p>
+        <h2>WELCOME IN MY PORTOFOLIO</h2>
+        <h3>
+          "Semua orang di negara ini harus belajar memprogram komputer karena komputer mengajarkan Anda cara berpikir.” <br></br> – Steve Jobs
+        </h3>
+        <p>Experienced In Manufacturing | Transformed into a Programmer</p>
       </div>
-
       <div className="hero-img">
         <img src="./assest/images/hero.png" alt="Hero" />
         <div>

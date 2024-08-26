@@ -24,13 +24,13 @@ section.hero-container {
 }
 
 .hero-content h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
-  color: #ffffff; /* White text color */
+  color: #2f32f7; /* White text color */
   text-align: left; /* Align text to the left */
 }
 .hero-content h3 {
-  font-size: 1.9rem;
+  font-size: 1.3rem;
   margin-bottom: 20px;
   color: #ffffff; /* White text color */
   text-align: left; /* Align text to the left */

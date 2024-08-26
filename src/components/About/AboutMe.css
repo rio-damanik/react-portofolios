@@ -1,0 +1,62 @@
+.about-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center horizontally */
+  padding: 30px; /* Adjust padding */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+}
+
+.section-left {
+  max-width: 45%; /* Adjusted width for better centering */
+  text-align: center; /* Center text */
+  margin-right: 20px; /* Add gap between sections */
+}
+
+.section-left .pre-title {
+  font-size: 1rem; /* Smaller font size */
+  color: #ccc; /* Light gray color for subtitle */
+  margin-bottom: 10px;
+}
+
+.section-left .your-name {
+  font-size: 2rem; /* Smaller font size */
+  color: #fff; /* White color for name */
+  margin-bottom: 20px;
+}
+
+.section-left .your-name span {
+  color: #9c27b0; /* Purple highlight for last name */
+}
+
+.section-left p {
+  font-size: 0.9rem; /* Smaller font size */
+  line-height: 1.5;
+  color: #ddd; /* Light gray color for paragraph text */
+}
+
+.section-right {
+  max-width: 45%; /* Adjusted width for better centering */
+  text-align: center; /* Center the image container */
+}
+
+.slideshow-container {
+  overflow: hidden;
+  position: relative;
+  width: 450px; /* Set width of container */
+  height: 450px; /* Set height of container */
+}
+
+.slideshow-images {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Slide transition */
+}
+
+.side-image {
+  width: 450px; /* Set width of images */
+  height: 450px; /* Set height of images */
+  object-fit: cover; /* Ensure images cover the container without distortion */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for better visibility */
+  padding: 30px; /* Ensure padding within the image container */
+}
