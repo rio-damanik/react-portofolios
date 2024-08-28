@@ -33,10 +33,10 @@ const NavbarSide = ({ toggleSidebar }) => {
             Hire Me
           </a>
         </li>
+        <button className="close-btn" onClick={toggleSidebar}>
+          &times;
+        </button>
       </ul>
-      <button className="close-btn" onClick={toggleSidebar}>
-        &times;
-      </button>
     </div>
   );
 };

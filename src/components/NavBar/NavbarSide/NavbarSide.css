@@ -2,14 +2,15 @@
   position: fixed;
   top: -100%; /* Start off-screen above */
   left: 0;
-  width: 100%; /* Full width */
-  height: auto; /* Adjust height to fit content */
+  width: 100%; /* Reduced width */
+  max-width: 230px; /* Maximum width */
+  height: 100%; /* Full height */
   background-color: rgb(26, 158, 136);
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px; /* Reduced padding */
   z-index: 999;
-  transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+  transition: top 0.3s ease, opacity 0.3s ease;
   transform: translateY(0); /* Default position */
   opacity: 0; /* Default opacity */
 }
@@ -22,11 +23,11 @@
 .navbar-logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; /* Space below the logo */
+  margin-bottom: 10px; /* Reduced space below the logo */
 }
 
 .logo-image {
-  height: 50px; /* Adjust the height as needed */
+  height: 40px; /* Reduced height */
   width: auto; /* Maintain aspect ratio */
 }
 
@@ -40,33 +41,47 @@
 }
 
 .navbar-side-menu li {
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced margin between items */
+  width: 100%; /* Full width for hover effect */
 }
 
 .navbar-side-menu a {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduced font size */
   text-decoration: none;
+  text-align: center;
+  display: block; /* Ensure the link takes up the full width of the list item */
+  padding: 8px; /* Reduced padding for better fit */
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.navbar-side-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
+}
+
+.navbar-side-menu a.active {
+  background-color: rgba(255, 255, 255, 0.5); /* Highlight active link */
 }
 
 .hire-me-btn {
   background-color: #6200ea;
   color: white;
-  padding: 5px 10px;
+  padding: 8px 16px; /* Reduced size for emphasis */
   border-radius: 5px;
   text-decoration: none;
   margin-top: auto; /* Push the button to the bottom */
+  font-size: 1rem; /* Adjust font size */
 }
 
 .close-btn {
   background: #e90000;
   border: 1px solid black;
   color: white;
-  width: 50px;
-  height: 50px;
-  font-size: 2rem;
+  width: 40px; /* Reduced width */
+  height: 40px; /* Reduced height */
+  font-size: 1.5rem; /* Reduced font size */
   cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
+
+  top: 10px; /* Reduced space from top */
+  right: 10px; /* Reduced space from right */
 }
