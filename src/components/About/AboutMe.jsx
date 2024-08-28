@@ -14,13 +14,13 @@ const AboutMe = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change slide every 3 seconds
+    }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [images.length]);
 
   return (
-    <section id="AboutMe" className="about-me-container">
+    <section id="aboutme" className="about-me-container">
       <div className="section-left">
         <h3 className="pre-title">My Name is</h3>
         <h1 className="your-name">

@@ -1,0 +1,45 @@
+.navbar-side {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Start off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: purple;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  z-index: 999;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition */
+  transform: translateX(0); /* Default position */
+  opacity: 0; /* Default opacity */
+}
+
+.navbar-side.open {
+  transform: translateX(250px); /* Slide in from the left */
+  opacity: 1; /* Full opacity when open */
+}
+
+.navbar-side a {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.hire-me-btn {
+  background-color: #6200ea;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 20px; /* Add some space below the button */
+}

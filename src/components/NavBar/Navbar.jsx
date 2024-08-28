@@ -1,80 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
-import MobileNav from "./MobileNav/MobileNav";
+import NavbarSide from "./NavbarSide/NavbarSide";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 750);
-      if (window.innerWidth > 750) {
-        setOpenMenu(false); // Close the mobile menu when resizing to a wider screen
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <>
-      {isMobile && <MobileNav isOpen={openMenu} toggleMenu={toggleMenu} />}
-
-      <nav className="nav-wrapper">
-        <div className="nav-content">
-          <img className="logo" src="./assest/images/logo.png" alt="Logo" />
-
-          <ul>
-            <li>
-              <a className="menu-item" href="#Hero">
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="menu-item" href="#AboutMe">
-                About
-              </a>
-            </li>
-            <li>
-              <a className="menu-item" href="#skills">
-                Skill
-              </a>
-            </li>
-            <li>
-              <a className="menu-item" href="#work-experience">
-                Work Experience
-              </a>
-            </li>
-            <li>
-              <a className="menu-item" href="#project-me">
-                Project
-              </a>
-            </li>
-            <li>
-              <a className="menu-item" href="#contact-me">
-                Contact Me
-              </a>
-            </li>
-            <button className="contact-btn" onClick={() => {}}>
-              Hire Me
-            </button>
-          </ul>
-
-          <button className="menu-btn" onClick={toggleMenu}>
-            <span className="material-symbols-outlined" style={{ fontSize: "1.8rem" }}>
-              {openMenu ? "close" : "menu"}
-            </span>
-          </button>
-        </div>
-      </nav>
+      {!isOpen && (
+        <nav className="navbar">
+          <div className="navbar-logo">
+            <a href="#hero">
+              <img className="logo" src="./assest/images/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <div className="navbar-menu">
+            <ul>
+              <li>
+                <a href="#hero">Home</a>
+              </li>
+              <li>
+                <a href="#aboutme">About</a>
+              </li>
+              <li>
+                <a href="#skills">Skill</a>
+              </li>
+              <li>
+                <a href="#work-experience">Work Experience</a>
+              </li>
+              <li>
+                <a href="#project-me">Project</a>
+              </li>
+              <li>
+                <a href="#contact-me">Contact Me</a>
+              </li>
+              <li>
+                <a href="/path-to-your-file" className="hire-me-btn">
+                  Hire Me
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="hamburger" onClick={toggleSidebar}>
+            &#9776;
+          </div>
+        </nav>
+      )}
+      <div className={`navbar-side ${isOpen ? "open" : ""}`}>
+        <NavbarSide toggleSidebar={toggleSidebar} />
+      </div>
     </>
   );
 };

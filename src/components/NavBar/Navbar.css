@@ -2,134 +2,74 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Navbar Container */
-/* Navbar Container */
-.nav-wrapper {
-  background-color: #060417;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
-  position: fixed; /* Make navbar fixed at the top */
+.navbar {
+  position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure navbar is above other content */
-}
-
-.nav-content {
+  left: 0;
+  right: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 30px;
+  align-items: center;
+  background-color: #000;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-body {
-  margin-top: 80px; /* Add top margin equal to navbar height to avoid content overlap */
+nav.navbar {
+  padding: 10px 30px;
 }
 
-/* Logo */
+.navbar-logo a {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  width: 150px;
-  height: auto;
+  width: 100px;
+  height: 40px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
 }
 
-/* Desktop Menu */
-ul {
+.navbar-menu ul {
   display: flex;
-  align-items: center;
+  gap: 20px; /* Adjusted gap for better spacing */
   list-style: none;
-  margin: 10px 0;
   padding: 0;
-  gap: 30px;
-  transition: all 0.3s ease;
-  font-size: medium;
+  margin: 0;
 }
 
-.menu-item {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 200;
-  position: relative;
-}
-
-.contact-btn {
-  background-color: #5231cc;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.contact-btn:hover {
-  background-color: #7e61e7;
-}
-
-.menu-item::before {
-  content: "";
-  width: 2rem;
-  height: 0.2rem;
-  background: linear-gradient(#a993fe 0%, #7e61e7 100%);
-  border-radius: 0.5rem;
-  position: absolute;
-  bottom: -0.6rem;
-  opacity: 0;
-  transform: translateX(-1.5rem);
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover::before {
-  width: 100%;
-  transform: translateX(0);
-  opacity: 1;
-}
-
-/* Mobile Menu Button */
-.menu-btn {
-  display: none; /* Initially hidden */
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.5rem;
+.navbar-menu li {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border: none;
-  border-radius: 0.4rem;
-  color: #fff;
-  background: linear-gradient(98deg, #a993fe 0%, #7e61e7 100%);
-  line-height: 0;
+}
+
+.navbar-menu a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.hire-me-btn {
+  background-color: #6200ea;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
   cursor: pointer;
-  transition: all 0.4s ease;
 }
 
-.menu-btn:hover {
-  color: #a993fe;
-  background: #000;
-  border: 1px solid #a993fe;
-}
-
-/* Media Query for width 750px and below */
 @media (max-width: 750px) {
-  ul {
-    display: none; /* Hide the menu items */
+  .navbar-menu {
+    display: none;
   }
 
-  .menu-btn {
-    display: flex; /* Show the menu button */
-  }
-
-  .nav-content {
-    justify-content: space-between; /* Adjust layout */
-  }
-}
-
-/* Media Query for width above 750px */
-@media (min-width: 751px) {
-  ul {
-    display: flex; /* Show the menu items */
-  }
-
-  .menu-btn {
-    display: none; /* Hide the menu button */
+  .hamburger {
+    display: block;
   }
 }
