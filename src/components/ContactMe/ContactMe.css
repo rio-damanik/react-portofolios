@@ -90,3 +90,18 @@
 .contact-form button:hover {
   background-color: #6d1f8e; /* Lighter purple on hover */
 }
+
+/* Media Queries for responsive design */
+@media (max-width: 750px) {
+  .contact-content {
+    flex-direction: column; /* Stack the contact card and form vertically */
+    align-items: center; /* Center the content */
+    gap: 20px; /* Space between the card and form */
+  }
+
+  .contact-card,
+  .contact-form {
+    width: 100%; /* Make the card and form take full width */
+    max-width: 100%; /* Ensure full width on smaller screens */
+  }
+}

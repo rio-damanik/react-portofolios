@@ -5,6 +5,16 @@
   position: relative;
   padding: 20px;
   background-color: #f8f8f8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding and borders are included in the width/height calculations */
+  width: 100%; /* Ensure the container takes up the full width */
+  background-color: #000;
+  color: black; /* Default text color for the container */
 }
 
 .slick-prev:before,
@@ -19,25 +29,17 @@
   overflow-y: hidden; /* Hide the vertical scrollbar */
 }
 
-section.work-experience-container {
-  padding: 6rem;
-}
-.work-experience-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
-  justify-content: center; /* Center the cards horizontally */
-  gap: 20px; /* Space between cards */
-  padding: 20px;
-  box-sizing: border-box; /* Ensures padding and borders are included in the width/height calculations */
-  width: 100%; /* Ensure the container takes up the full width */
-  background-color: #000;
-  color: black; /* Default text color for the container */
-}
-
 .work-experience-container h2 {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
   color: #ffffff; /* Specific color for the h2 element */
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 750px) {
+  .work-experience-container {
+    width: 100%; /* Set width to 100% on smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
 }

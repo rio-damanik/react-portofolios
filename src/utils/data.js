@@ -16,6 +16,8 @@ export const SKILLS = [
     skills: [
       { skill: "Node.js", icon: "../assest/images/icon-node.png" }, // Local image
       { skill: "Express.js", icon: "../assest/images/icon-express.png" }, // Local image
+      { skill: "My SQL", icon: "../assest/images/icon-mysql.png" }, // Local image
+      { skill: "Mongo DB", icon: "../assest/images/icon-mongodb.png" }, // Local image
     ],
   },
   {

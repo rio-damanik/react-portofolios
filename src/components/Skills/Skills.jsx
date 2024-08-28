@@ -18,6 +18,20 @@ const Skills = () => {
     <section id="skills" className="skills-container">
       <h5>Technical Proficiency</h5>
 
+      {/* Display content for active category on the front up */}
+      <div className={`skills-display ${activeCategory ? "show" : ""}`}>
+        {SKILLS.filter((category) => category.title === activeCategory).map((category) => (
+          <div key={category.title} className="skills-display-content">
+            {category.skills.map((skill) => (
+              <SkillCard key={skill.skill} iconUrl={skill.icon} title={skill.skill} />
+            ))}
+          </div>
+        ))}
+        <button className="close-btn" onClick={() => setActiveCategory(null)}>
+          Close
+        </button>
+      </div>
+
       <div className="skills-content-container">
         {/* List of categories on the left */}
         <div className="skills-list">
@@ -29,20 +43,6 @@ const Skills = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Display content for active category on the right */}
-        <div className={`skills-display ${activeCategory ? "show" : ""}`}>
-          {SKILLS.filter((category) => category.title === activeCategory).map((category) => (
-            <div key={category.title} className="skills-display-content">
-              {category.skills.map((skill) => (
-                <SkillCard key={skill.skill} iconUrl={skill.icon} title={skill.skill} />
-              ))}
-            </div>
-          ))}
-          <button className="close-btn" onClick={() => setActiveCategory(null)}>
-            Close
-          </button>
         </div>
       </div>
     </section>
