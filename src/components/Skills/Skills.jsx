@@ -27,7 +27,7 @@ const Skills = () => {
             ))}
           </div>
         ))}
-        <button className="close-btn" onClick={() => setActiveCategory(null)}>
+        <button className="close-btn-skill" onClick={() => setActiveCategory(null)}>
           Close
         </button>
       </div>

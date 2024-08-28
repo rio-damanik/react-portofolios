@@ -1,21 +1,21 @@
 .navbar-side {
   position: fixed;
-  top: 0;
-  left: -250px; /* Start off-screen */
-  width: 250px;
-  height: 100%;
-  background-color: purple;
+  top: -100%; /* Start off-screen above */
+  left: 0;
+  width: 100%; /* Full width */
+  height: auto; /* Adjust height to fit content */
+  background-color: rgb(26, 158, 136);
   display: flex;
   flex-direction: column;
   padding: 20px;
   z-index: 999;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transform: translateX(0); /* Default position */
+  transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0); /* Default position */
   opacity: 0; /* Default opacity */
 }
 
 .navbar-side.open {
-  transform: translateX(250px); /* Slide in from the left */
+  top: 0; /* Slide in from the top */
   opacity: 1; /* Full opacity when open */
 }
 
@@ -45,7 +45,7 @@
 
 .navbar-side-menu a {
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
@@ -62,11 +62,11 @@
   background: #e90000;
   border: 1px solid black;
   color: white;
+  width: 50px;
+  height: 50px;
   font-size: 2rem;
   cursor: pointer;
-  position: relative;
-  top: 20px; /* Space from the top */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  margin-bottom: 20px; /* Space below the button */
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

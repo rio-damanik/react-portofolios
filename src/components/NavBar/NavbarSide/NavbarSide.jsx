@@ -3,45 +3,33 @@ import "./NavbarSide.css";
 
 const NavbarSide = ({ toggleSidebar }) => {
   return (
-    <div>
+    <div className="navbar-side open">
       <div className="navbar-logo">
-        <a href="#hero" onClick={toggleSidebar}>
+        <a href="#hero">
           <img className="logo" src="./assest/images/logo.png" alt="Logo" />
         </a>
       </div>
       <ul className="navbar-side-menu">
         <li>
-          <a href="#hero" onClick={toggleSidebar}>
-            Home
-          </a>
+          <a href="#hero">Home</a>
         </li>
         <li>
-          <a href="#aboutme" onClick={toggleSidebar}>
-            About
-          </a>
+          <a href="#aboutme">About</a>
         </li>
         <li>
-          <a href="#skills" onClick={toggleSidebar}>
-            Skill
-          </a>
+          <a href="#skills">Skill</a>
         </li>
         <li>
-          <a href="#work-experience" onClick={toggleSidebar}>
-            Work Experience
-          </a>
+          <a href="#work-experience">Work Experience</a>
         </li>
         <li>
-          <a href="#project-me" onClick={toggleSidebar}>
-            Project
-          </a>
+          <a href="#project-me">Project</a>
         </li>
         <li>
-          <a href="#contact-me" onClick={toggleSidebar}>
-            Contact Me
-          </a>
+          <a href="#contact-me">Contact Me</a>
         </li>
         <li>
-          <a href="/path-to-your-file" className="hire-me-btn" onClick={toggleSidebar}>
+          <a href="/path-to-your-file" className="hire-me-btn">
             Hire Me
           </a>
         </li>
