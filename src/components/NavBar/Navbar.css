@@ -25,9 +25,9 @@ nav.navbar {
 }
 
 .logo {
-  width: 100px;
-  height: 40px; /* Adjust the height as needed */
-  width: auto; /* Maintain aspect ratio */
+  margin-top: 20px;
+  height: 41px;
+  width: auto;
 }
 
 .navbar-menu ul {

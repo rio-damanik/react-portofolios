@@ -5,11 +5,16 @@
   padding: 30px; /* Adjust padding */
   background-color: #000; /* Black background */
   color: #fff; /* White text color */
+  flex-direction: row; /* Default direction for larger screens */
+}
+
+.section-left,
+.section-right {
+  max-width: 45%; /* Adjusted width for better centering */
+  text-align: center; /* Center text */
 }
 
 .section-left {
-  max-width: 45%; /* Adjusted width for better centering */
-  text-align: center; /* Center text */
   margin-right: 20px; /* Add gap between sections */
 }
 
@@ -36,7 +41,6 @@
 }
 
 .section-right {
-  max-width: 45%; /* Adjusted width for better centering */
   text-align: center; /* Center the image container */
 }
 
@@ -59,4 +63,42 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for better visibility */
   padding: 30px; /* Ensure padding within the image container */
+}
+
+/* Media query for screens 750px and below */
+@media (max-width: 750px) {
+  .about-me-container {
+    flex-direction: column; /* Stack sections vertically on small screens */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .section-left,
+  .section-right {
+    max-width: 90%; /* Increase width for better fit */
+    margin: 0; /* Remove margins for vertical stacking */
+    text-align: center; /* Center-align text */
+  }
+
+  .section-left {
+    margin-bottom: 20px; /* Add space below section */
+  }
+
+  .slideshow-container {
+    width: 300px; /* Reduce width of container */
+    height: 300px; /* Reduce height of container */
+  }
+
+  .side-image {
+    width: 300px; /* Reduce width of images */
+    height: 300px; /* Reduce height of images */
+  }
+
+  .section-left .your-name {
+    font-size: 1.5rem; /* Smaller font size */
+  }
+
+  .section-left p {
+    font-size: 1rem; /* Smaller font size */
+    padding: 10px 30px;
+  }
 }

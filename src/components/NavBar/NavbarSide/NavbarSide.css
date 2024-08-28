@@ -9,7 +9,7 @@
   flex-direction: column;
   padding: 20px;
   z-index: 999;
-  transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition */
+  transition: transform 0.3s ease, opacity 0.3s ease;
   transform: translateX(0); /* Default position */
   opacity: 0; /* Default opacity */
 }
@@ -19,10 +19,33 @@
   opacity: 1; /* Full opacity when open */
 }
 
-.navbar-side a {
+.navbar-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Space below the logo */
+}
+
+.logo-image {
+  height: 50px; /* Adjust the height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.navbar-side-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align menu items */
+}
+
+.navbar-side-menu li {
+  margin-bottom: 15px;
+}
+
+.navbar-side-menu a {
   color: white;
   font-size: 1rem;
-  margin-bottom: 15px;
   text-decoration: none;
 }
 
@@ -32,14 +55,18 @@
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
-  align-self: flex-start;
+  margin-top: auto; /* Push the button to the bottom */
 }
 
 .close-btn {
-  background: none;
-  border: none;
+  background: #e90000;
+  border: 1px solid black;
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  margin-bottom: 20px; /* Add some space below the button */
+  position: relative;
+  top: 20px; /* Space from the top */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  margin-bottom: 20px; /* Space below the button */
 }

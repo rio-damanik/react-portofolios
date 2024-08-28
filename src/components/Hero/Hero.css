@@ -101,6 +101,10 @@ section.hero-container {
     text-align: center;
   }
 
+  .hero-content h3 {
+    text-align: center;
+  }
+
   .hero-content p {
     text-align: center;
   }
@@ -114,5 +118,6 @@ section.hero-container {
   .hero-img img {
     width: 100%;
     max-width: 300px; /* Adjust for smaller screens */
+    margin-bottom: 20px;
   }
 }

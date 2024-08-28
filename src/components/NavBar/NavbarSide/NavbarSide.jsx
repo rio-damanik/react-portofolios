@@ -4,9 +4,11 @@ import "./NavbarSide.css";
 const NavbarSide = ({ toggleSidebar }) => {
   return (
     <div>
-      <button className="close-btn" onClick={toggleSidebar}>
-        &times;
-      </button>
+      <div className="navbar-logo">
+        <a href="#hero" onClick={toggleSidebar}>
+          <img className="logo" src="./assest/images/logo.png" alt="Logo" />
+        </a>
+      </div>
       <ul className="navbar-side-menu">
         <li>
           <a href="#hero" onClick={toggleSidebar}>
@@ -44,6 +46,9 @@ const NavbarSide = ({ toggleSidebar }) => {
           </a>
         </li>
       </ul>
+      <button className="close-btn" onClick={toggleSidebar}>
+        &times;
+      </button>
     </div>
   );
 };
