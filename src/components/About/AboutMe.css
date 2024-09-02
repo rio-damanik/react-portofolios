@@ -63,6 +63,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly darker shadow for better visibility */
   padding: 30px; /* Ensure padding within the image container */
+  width: auto;
 }
 
 /* Media query for screens 750px and below */
