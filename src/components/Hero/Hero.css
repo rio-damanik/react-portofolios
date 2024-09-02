@@ -9,7 +9,6 @@ section.hero-container {
   justify-content: space-between;
   padding: 30px;
   background-color: #000000; /* Dark background color */
-  min-height: 100vh; /* Full viewport height */
   box-sizing: border-box; /* Include padding in width and height calculations */
 }
 
