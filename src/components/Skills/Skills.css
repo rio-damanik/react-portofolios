@@ -1,170 +1,118 @@
-/* Default styles */
 .skills-container {
   padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 80%;
   background: #000;
 }
 
 .skills-container h5 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #f9f9f9;
   padding-bottom: 20px;
 }
 
-.skills-content-container {
-  display: flex;
+.accordion {
   width: 100%;
 }
 
-.skills-list {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.skills-section {
-  width: 100%;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
+.accordion-item {
   border: 1px solid #ddd;
   border-radius: 8px;
-  cursor: pointer;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Ensure smooth height transition */
+  transition: max-height 0.3s ease-out; /* Smooth transition */
+  margin: 10px;
 }
 
-.skills-section.active {
-  border: 2px solid #4a148c; /* Dark purple border */
-}
-
-.skills-header {
+.accordion-header {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 12px;
+  cursor: pointer;
   background-color: #000;
+  color: #fff;
   border-radius: 8px;
+  background: blueviolet;
+}
+
+.accordion-header h6 {
+  flex: 1;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.accordion-icon {
+  width: 35px;
+  height: auto;
+  margin-right: 12px;
+}
+
+.accordion-toggle {
+  font-size: 1.4rem;
   color: #fff;
 }
 
-.skills-icon {
-  width: 40px;
-  height: auto;
-  margin-right: 15px;
-  background: #ffffff;
-}
-
-.skills-header h6 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.skills-display {
-  flex: 2;
+.accordion-content {
   padding: 15px;
-  border: 1px solid #4a148c; /* Dark purple border */
-  border-radius: 8px;
-  background-color: #b375af;
-  margin-left: 20px;
-  display: none; /* Hide by default */
-  flex-direction: column;
-  align-items: center;
-}
-
-.skills-display.show {
-  display: block;
-  padding: 20px; /* Show when category is active */
-  margin-bottom: 20px;
-}
-
-.skills-display-content {
-  width: 100%;
+  background-color: #8982c7;
   display: flex;
-  gap: 15px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 0;
+  transition: max-height 0.3s ease-out; /* Smooth transition for content */
+  overflow: hidden;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px; /* Set an appropriate max-height to enable the transition */
+}
+
+.accordion-item.active {
+  border: 2px solid #4a148c;
 }
 
 .skill-card {
-  flex: 1 1 calc(33.333% - 10px); /* Adjust size to fit 3 in a row with gap */
-  max-width: calc(33.333% - 10px); /* Max width for 3 in a row */
-  margin-bottom: 10px;
   background-color: #000;
-  color: #fff;
   padding: 15px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  width: calc(30% - 10px);
+  margin-right: 15px; /* Add horizontal spacing between cards */
+  margin-left: 15px; /* Add horizontal spacing between cards */
 }
 
 .skill-card-icon {
-  width: 30px;
-  height: auto;
+  width: 50px;
+  height: 50px;
   margin-bottom: 10px;
+  background: white;
 }
 
-.close-btn-skill {
-  background-color: #ff0000;
-  color: #fff;
-  border: none;
-  width: 100px; /* Set width to 100px */
-  height: 50px; /* Set height to 50px */
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-top: 20px; /* Space above the button */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.skill-card h4 {
+  font-size: 0.95rem;
 }
 
-.close-btn-skill:hover {
-  background-color: #cc0000;
-}
-
-/* Media Queries for responsive design */
+/* Responsive styling for small screens */
 @media (max-width: 750px) {
   .skills-container {
-    padding: 15px; /* Adjust padding for smaller screens */
+    padding: 15px;
+    width: 95%;
   }
 
-  .skills-content-container {
-    flex-direction: column; /* Stack categories and skills vertically */
-  }
-
-  .skills-list {
-    flex: none; /* Allow it to take up as much space as needed */
-    margin-bottom: 15px; /* Add space below the list */
-  }
-
-  .skills-display {
-    margin-left: 0; /* Remove left margin on small screens */
-  }
-
-  .skills-display-content {
+  .accordion-content {
     display: flex;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    width: 100%;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    align-items: center;
   }
 
   .skill-card {
-    flex: none; /* Reset flex properties */
-    max-width: none; /* Remove max-width */
-  }
-
-  .skill-card h4 {
-    font-size: 0.9rem;
-  }
-
-  .skills-section {
-    width: 100%;
-    margin-left: 0;
+    width: calc(45% - 20px); /* Slightly larger width for small screens */
     margin-bottom: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    cursor: pointer;
   }
 }

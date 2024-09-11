@@ -8,9 +8,9 @@ const Skills = () => {
 
   const handleCategoryClick = (category) => {
     if (activeCategory === category) {
-      setActiveCategory(null); // Close if the same category is clicked
+      setActiveCategory(null); // Collapse the category if clicked again
     } else {
-      setActiveCategory(category); // Open new category
+      setActiveCategory(category); // Expand the new category
     }
   };
 
@@ -18,32 +18,25 @@ const Skills = () => {
     <section id="skills" className="skills-container">
       <h5>Technical Proficiency</h5>
 
-      {/* Display content for active category on the front up */}
-      <div className={`skills-display ${activeCategory ? "show" : ""}`}>
-        {SKILLS.filter((category) => category.title === activeCategory).map((category) => (
-          <div key={category.title} className="skills-display-content">
-            {category.skills.map((skill) => (
-              <SkillCard key={skill.skill} iconUrl={skill.icon} title={skill.skill} />
-            ))}
+      <div className="accordion">
+        {SKILLS.map((category) => (
+          <div key={category.title} className={`accordion-item ${activeCategory === category.title ? "active" : ""}`}>
+            <div className="accordion-header" onClick={() => handleCategoryClick(category.title)}>
+              <img src={category.icon} alt={category.title} className="accordion-icon" />
+              <h6>{category.title}</h6>
+              <span className={`accordion-toggle ${activeCategory === category.title ? "open" : ""}`}>{activeCategory === category.title ? "-" : "+"}</span>
+            </div>
+
+            {/* Expandable content for the category */}
+            {activeCategory === category.title && (
+              <div className="accordion-content">
+                {category.skills.map((skill) => (
+                  <SkillCard key={skill.skill} iconUrl={skill.icon} title={skill.skill} />
+                ))}
+              </div>
+            )}
           </div>
         ))}
-        <button className="close-btn-skill" onClick={() => setActiveCategory(null)}>
-          Close
-        </button>
-      </div>
-
-      <div className="skills-content-container">
-        {/* List of categories on the left */}
-        <div className="skills-list">
-          {SKILLS.map((category) => (
-            <div key={category.title} className={`skills-section ${activeCategory === category.title ? "active" : ""}`} onClick={() => handleCategoryClick(category.title)}>
-              <div className="skills-header">
-                <img src={category.icon} alt={category.title} className="skills-icon" />
-                <h6>{category.title}</h6>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
