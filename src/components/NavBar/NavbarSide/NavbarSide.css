@@ -64,7 +64,7 @@
 }
 
 .hire-me-btn {
-  background-color: #6200ea;
+  background-color: #148ea3;
   color: white;
   padding: 8px 16px; /* Reduced size for emphasis */
   border-radius: 5px;
@@ -84,4 +84,47 @@
 
   top: 10px; /* Reduced space from top */
   right: 10px; /* Reduced space from right */
+}
+
+.navbar-side-menu a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 8px;
+  transition: background-color 0.3s ease, padding 0.3s ease, color 0.3s ease;
+}
+
+.navbar-side-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* New class for active link */
+.navbar-side-menu a.active-link {
+  color: #0f7c8b; /* Change text color when the link is active */
+  background-color: rgba(255, 255, 255, 0.5); /* Optional background change */
+}
+
+.hire-me-btn {
+  background-color: #148ea3;
+  color: white;
+  padding: 8px 16px; /* Ukuran yang lebih besar */
+  border-radius: 5px;
+  border: none; /* Hapus border default button */
+  text-decoration: none;
+  margin-top: auto;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  width: -webkit-fill-available;
+}
+
+.hire-me-btn:hover {
+  background-color: #0f7c8b; /* Warna hover */
+}
+
+.hire-me-btn.active-link {
+  color: rgb(26, 142, 172); /* Warna teks ketika aktif */
+  background-color: rgba(255, 255, 255, 0.5); /* Latar belakang saat aktif */
 }

@@ -1,3 +1,14 @@
+/* Style for active menu item */
+.navbar-menu a.active {
+  color: #ffffff; /* Change text color when active */
+  font-weight: bold; /* Optional: make active text bold */
+}
+
+/* Style when hovering over menu items */
+.navbar-menu a:hover {
+  color: #25b0c9;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -50,11 +61,21 @@ nav.navbar {
 }
 
 .hire-me-btn {
-  background-color: #6200ea;
+  background-color: #148ea3;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hire-me-btn:hover {
+  background-color: #4e00c5;
+}
+
+.hire-me-btn.active-hire-me {
+  background-color: #17b686; /* Change button color when clicked */
+  color: white;
 }
 
 .hamburger {

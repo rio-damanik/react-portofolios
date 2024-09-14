@@ -4,9 +4,22 @@ import NavbarSide from "./NavbarSide/NavbarSide";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState("#hero"); // state to track active menu
+  const [isHireMeActive, setHireMeActive] = useState(false); // state to track Hire Me button
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleMenuClick = (menuId) => {
+    setActiveMenu(menuId);
+  };
+
+  const handleHireMeClick = () => {
+    setHireMeActive(true);
+    setTimeout(() => {
+      setHireMeActive(false); // Reset button color after click
+    }, 2000); // Button stays active for 2 seconds
   };
 
   return (
@@ -21,25 +34,37 @@ const Navbar = () => {
           <div className="navbar-menu">
             <ul>
               <li>
-                <a href="#hero">Home</a>
+                <a href="#hero" onClick={() => handleMenuClick("#hero")} className={activeMenu === "#hero" ? "active" : ""}>
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#aboutme">About</a>
+                <a href="#aboutme" onClick={() => handleMenuClick("#aboutme")} className={activeMenu === "#aboutme" ? "active" : ""}>
+                  About
+                </a>
               </li>
               <li>
-                <a href="#skills">Skill</a>
+                <a href="#skills" onClick={() => handleMenuClick("#skills")} className={activeMenu === "#skills" ? "active" : ""}>
+                  Skill
+                </a>
               </li>
               <li>
-                <a href="#work-experience">Work Experience</a>
+                <a href="#work-experience" onClick={() => handleMenuClick("#work-experience")} className={activeMenu === "#work-experience" ? "active" : ""}>
+                  Work Experience
+                </a>
               </li>
               <li>
-                <a href="#project-me">Project</a>
+                <a href="#project-me" onClick={() => handleMenuClick("#project-me")} className={activeMenu === "#project-me" ? "active" : ""}>
+                  Project
+                </a>
               </li>
               <li>
-                <a href="#contact-me">Contact Me</a>
+                <a href="#contact-me" onClick={() => handleMenuClick("#contact-me")} className={activeMenu === "#contact-me" ? "active" : ""}>
+                  Contact Me
+                </a>
               </li>
               <li>
-                <a href="/path-to-your-file" className="hire-me-btn">
+                <a href="https://pdf.ac/BGkpb" className={`hire-me-btn ${isHireMeActive ? "active-hire-me" : ""}`} onClick={handleHireMeClick}>
                   Hire Me
                 </a>
               </li>
