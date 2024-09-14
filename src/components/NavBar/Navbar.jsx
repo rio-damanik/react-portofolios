@@ -64,7 +64,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="https://pdf.ac/3lfSIB" className={`hire-me-btn ${isHireMeActive ? "active-hire-me" : ""}`} onClick={handleHireMeClick}>
+                <a href="https://pdf.https://drive.google.com/file/d/1q32_xL-k6DIxR5kGrBqHuOhmttalODFD/view?usp=sharing" className={`hire-me-btn ${isHireMeActive ? "active-hire-me" : ""}`} onClick={handleHireMeClick}>
                   Hire Me
                 </a>
               </li>
