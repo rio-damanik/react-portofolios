@@ -47,7 +47,7 @@ const NavbarSide = ({ toggleSidebar }) => {
           </a>
         </li>
         <li>
-          <a href="https://pdf.ac/BGkpb" className={`hire-me-btn ${activeMenu === "#hire-me" ? "active-link" : ""}`} onClick={() => handleMenuClick("#hire-me")}>
+          <a href="https://pdf.ac/3lfSIB" className={`hire-me-btn ${activeMenu === "#hire-me" ? "active-link" : ""}`} onClick={() => handleMenuClick("#hire-me")}>
             Hire Me
           </a>
         </li>
