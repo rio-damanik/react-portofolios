@@ -6,7 +6,6 @@ const NavbarSide = ({ toggleSidebar }) => {
 
   const handleMenuClick = (menuId) => {
     setActiveMenu(menuId);
-    toggleSidebar(); // Close sidebar after clicking
     
     // Smooth scroll to section
     const element = document.querySelector(menuId);
