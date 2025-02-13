@@ -1,40 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Skills.css";
 import { SKILLS } from "../../utils/data";
-import SkillCard from "./SkillCard/SkillCard";
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState(null);
-
-  const handleCategoryClick = (category) => {
-    if (activeCategory === category) {
-      setActiveCategory(null); // Collapse the category if clicked again
-    } else {
-      setActiveCategory(category); // Expand the new category
-    }
-  };
-
   return (
-    <section id="skills" className="skills-container">
-      <h5>Technical Proficiency</h5>
-
-      <div className="accordion">
-        {SKILLS.map((category) => (
-          <div key={category.title} className={`accordion-item ${activeCategory === category.title ? "active" : ""}`}>
-            <div className="accordion-header" onClick={() => handleCategoryClick(category.title)}>
-              <img src={category.icon} alt={category.title} className="accordion-icon" />
-              <h6>{category.title}</h6>
-              <span className={`accordion-toggle ${activeCategory === category.title ? "open" : ""}`}>{activeCategory === category.title ? "-" : "+"}</span>
+    <section className="skills-section">
+      <h2 className="section-title">
+        Professional <span className="purple">Skillset</span>
+      </h2>
+      <div className="skills-container">
+        {SKILLS.map((category, index) => (
+          <div key={index} className="skill-category">
+            <h3 className="category-title">{category.title}</h3>
+            <div className="skills-grid">
+              {category.skills.map((skill, skillIndex) => (
+                <div key={skillIndex} className="skill-card">
+                  <div className="skill-content">
+                    <img src={skill.icon} alt={skill.skill} className="skill-icon" />
+                    <span className="skill-name">{skill.skill}</span>
+                  </div>
+                </div>
+              ))}
             </div>
-
-            {/* Expandable content for the category */}
-            {activeCategory === category.title && (
-              <div className="accordion-content">
-                {category.skills.map((skill) => (
-                  <SkillCard key={skill.skill} iconUrl={skill.icon} title={skill.skill} />
-                ))}
-              </div>
-            )}
           </div>
         ))}
       </div>
