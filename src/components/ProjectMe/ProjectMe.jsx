@@ -8,7 +8,7 @@ const ProjectMe = () => {
       description: "This Fullstack Cashier application for food and beverages is designed to simplify the operations of culinary businesses, such as restaurants, cafes, or food stalls. It integrates key features such as ordering, payment, and menu management in one platform. Cashiers can easily take orders, whether for dine-in, takeaway, or delivery. Menu management becomes practical with the features of adding, editing, and deleting menu data.",
       image: "/kasir.png",
       github: "https://github.com/rio-damanik/aplikasi_kasir-Mern",
-      demo: "#",
+      demo: "https://aplikasi-kasir-mern.vercel.app",
       tech: ["React.JS", "MongoDB", "Express.js", "Node.js"],
       date: "Dec 2024"
     },
@@ -16,7 +16,7 @@ const ProjectMe = () => {
       title: "Personal Portfolio Website",
       description: "A portfolio showcasing skills and projects, built using React.js as the frontend.",
       image: "/portfolio.png",
-      github: "#",
+      github: "https://github.com/rio-damanik/react-portofolios",
       demo: "https://riodamanik.vercel.app",
       tech: ["React.js"],
       date: "2024"
@@ -25,11 +25,11 @@ const ProjectMe = () => {
       title: "Mini Project - Fundamental Course",
       description: "A beginner-friendly project developed during the RevoU Fundamental Course in Software Engineering. This project focused on building a basic responsive website using HTML and CSS.",
       image: "/miniproject.png",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/rio-damanik/miniproject-revou",
+      demo: "https://rio-damanik.github.io/miniproject-revou",
       tech: ["HTML", "CSS", "JavaScript"],
       date: "April 2024",
-      certificate: "RevoU Certificate"
+      certificate: "https://certificates.revou.co/rio-damanik-certificate-completion-fswd.pdf"
     }
   ];
 
@@ -63,18 +63,14 @@ const ProjectMe = () => {
                   ))}
                 </div>
                 <div className="project-links">
-                  {project.github !== "#" && (
-                    <a href={project.github} className="btn btn-github" target="_blank" rel="noopener noreferrer">
-                      GitHub
-                    </a>
-                  )}
-                  {project.demo !== "#" && (
-                    <a href={project.demo} className="btn btn-demo" target="_blank" rel="noopener noreferrer">
-                      Demo
-                    </a>
-                  )}
+                  <a href={project.github} className="btn btn-github" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                  <a href={project.demo} className="btn btn-demo" target="_blank" rel="noopener noreferrer">
+                    Demo
+                  </a>
                   {project.certificate && (
-                    <a href="#" className="btn btn-certificate" target="_blank" rel="noopener noreferrer">
+                    <a href={project.certificate} className="btn btn-certificate" target="_blank" rel="noopener noreferrer">
                       Certificate
                     </a>
                   )}
