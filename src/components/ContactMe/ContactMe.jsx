@@ -7,8 +7,10 @@ import githubIcon from "../ContactMe/assestcontact/icon-github2.png";
 
 const ContactMe = () => {
   return (
-    <section id="contact-me" className="contact-container">
-      <h2 className="contact-title">Contact Me</h2>
+    <section id="contact" className="contact-container">
+      <h2 className="section-title">
+        Contact <span className="purple">Me</span>
+      </h2>
       <div className="contact-content">
         {/* Contact Information Card */}
         <div className="contact-card">
@@ -37,7 +39,7 @@ const ContactMe = () => {
         {/* Contact Form */}
         <div className="contact-form">
           <h3>Contact Form</h3>
-          <form action="mailto:example@example.com" method="post" enctype="text/plain">
+          <form action="mailto:example@example.com" method="post" encType="text/plain">
             <label>
               First Name:
               <input type="text" name="firstName" required />

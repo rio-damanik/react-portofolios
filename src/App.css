@@ -34,7 +34,7 @@ container {
   display: block;
   left: 5px;
   top: 5px;
-  transform: translate(0, 10px);
+
 }
 svg {
   border-radius: 10px;
