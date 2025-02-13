@@ -254,19 +254,19 @@
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   border: none;
-  background-color: #ffffff;
-  color: #000000;
+  background: white;
+  color: purple;
 }
 
 .btn:hover {
   transform: scale(1.15);
   box-shadow: 0 0 15px rgba(189, 99, 249, 0.3);
-  background: #ffffff;
+  background: white;
   color: #bd63f9;
 }
 
 .btn[href="#"] {
-  background-color: #222222 !important;
+  background-color: #ffffff;
   color: #666666 !important;
   cursor: not-allowed;
   opacity: 0.7;
@@ -278,32 +278,32 @@
 }
 
 .btn-github {
-  background-color: #ffffff;
-  color: #000000;
+  background: white !important;
+  color: purple;
 }
 
 .btn-github:hover {
-  background: #ffffff;
+  background: white;
   color: #bd63f9;
 }
 
 .btn-demo {
-  background-color: #ffffff;
-  color: #000000;
+  background: white !important;
+  color: purple;
 }
 
 .btn-demo:hover {
-  background: #ffffff;
+  background: white;
   color: #bd63f9;
 }
 
 .btn-certificate {
-  background-color: #ffffff;
-  color: #000000;
+  background: white !important;
+  color: purple;
 }
 
 .btn-certificate:hover {
-  background: #ffffff;
+  background: white;
   color: #bd63f9;
 }
 
