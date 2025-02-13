@@ -194,6 +194,7 @@
   .slider-container {
     padding: 0 20px;
     width: 80%;
+    margin-left: 20px;
   }
 
   .timeline-item {
