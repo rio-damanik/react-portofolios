@@ -41,9 +41,12 @@ const WorkExperience = () => {
             <div key={index} className="timeline-item">
               <div className="timeline-content">
                 <div className="job-header">
-                  <div className="job-title">
-                    <h3>{job.position}</h3>
-                    {job.type && <span className="job-type">{job.type}</span>}
+                  <div className="job-title-row">
+                    <div className="job-title">
+                      <h3>{job.position}</h3>
+                      {job.type && <span className="job-type">{job.type}</span>}
+                    </div>
+                    <div className="period">{job.period}</div>
                   </div>
                   <div className="job-info">
                     <div className="company-info">
@@ -54,7 +57,6 @@ const WorkExperience = () => {
                       <IoLocationSharp className="icon" />
                       <span>{job.location}</span>
                     </div>
-                    <div className="period">{job.period}</div>
                   </div>
                 </div>
 

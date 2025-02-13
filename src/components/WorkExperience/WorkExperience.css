@@ -104,11 +104,17 @@
   margin-bottom: 20px;
 }
 
+.job-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
 .job-title {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 10px;
 }
 
 .job-title h3 {
@@ -125,10 +131,16 @@
   font-size: 0.8rem;
 }
 
+.period {
+  color: #bd63f9;
+  font-weight: 500;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
 .job-info {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
   font-size: 0.9rem;
   color: #ccc;
 }
@@ -142,12 +154,6 @@
 
 .icon {
   color: #bd63f9;
-  font-size: 0.9rem;
-}
-
-.period {
-  color: #bd63f9;
-  font-weight: 500;
   font-size: 0.9rem;
 }
 
@@ -231,7 +237,7 @@ li::before {
     height: 16px;
   }
 
-  .job-title {
+  .job-title-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
