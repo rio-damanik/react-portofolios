@@ -17,16 +17,238 @@
   color: black; /* Default text color for the container */
 }
 
-.slick-prev:before,
-.slick-next:before {
-  color: #000; /* Adjust arrow color */
+.experience-section {
+  padding: 50px 0;
+  background: rgb(10, 4, 22);
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.experience-cards {
-  padding: 20px 0;
-  width: 100%; /* Ensure the slider takes up the full width */
-  overflow-x: hidden; /* Hide the horizontal scrollbar */
-  overflow-y: hidden; /* Hide the vertical scrollbar */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  width: auto;
+}
+
+.purple {
+  color: #bd63f9;
+}
+
+.slider-container {
+  max-width: 800px;
+  width: 600px; /* Match with timeline-item width */
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  transform: translateX(25px); /* Move container slightly to the right */
+}
+
+/* Hide default slick arrows */
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+/* Custom arrows */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(189, 99, 249, 0.1);
+  border: 2px solid #bd63f9;
+  color: #bd63f9;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: rgba(189, 99, 249, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-arrow.prev {
+  left: -70px;
+}
+
+.slider-arrow.next {
+  right: -70px;
+}
+
+.slider-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.timeline-item {
+  padding: 20px;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #bd63f9;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  width: 600px; /* Fixed width */
+}
+
+.job-header {
+  margin-bottom: 20px;
+}
+
+.job-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.job-title h3 {
+  font-size: 1.3rem;
+  color: #bd63f9;
+  margin: 0;
+}
+
+.job-type {
+  background: rgba(189, 99, 249, 0.2);
+  color: #bd63f9;
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.job-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.company-info,
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  color: #bd63f9;
+  font-size: 0.9rem;
+}
+
+.period {
+  color: #bd63f9;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.job-details {
+  padding: 15px;
+  background: rgba(189, 99, 249, 0.05);
+  border-radius: 8px;
+}
+
+.responsibilities,
+.achievements {
+  margin-bottom: 15px;
+}
+
+.responsibilities h4,
+.achievements h4 {
+  color: #bd63f9;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.achievement-icon {
+  color: #ffd700;
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+li {
+  position: relative;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+li::before {
+  content: "•";
+  color: #bd63f9;
+  position: absolute;
+  left: -20px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    width: 90%;
+  }
+
+  .slider-container {
+    padding: 0 20px;
+    width: 90%;
+  }
+
+  .timeline-item {
+    width: 100%;
+  }
+
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+    top: 50%;
+  }
+
+  .slider-arrow.prev {
+    left: -45px;
+  }
+
+  .slider-arrow.next {
+    right: -45px;
+  }
+
+  .slider-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .job-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .job-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .job-details {
+    padding: 12px;
+  }
+
+  li {
+    font-size: 0.85rem;
+  }
 }
 
 .work-experience-container h2 {

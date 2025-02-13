@@ -41,3 +41,59 @@ export const SKILLS = [
     ],
   },
 ];
+
+export const WORK_EXPERIENCE = [
+  {
+    company: "PT OCS Global Services",
+    location: "Bogor",
+    position: "Production Helper",
+    type: "Freelance",
+    period: "May 2024 - Present",
+    responsibilities: [
+      "Carry out daily operations in line with SOP and occupational health and safety standards (K3) to ensure efficient production processes.",
+      "Assist the production team in maintaining operational efficiency, both independently and as part of a team.",
+      "Oversee the flow of raw materials and ensure that equipment is ready for use on the production floor.",
+      "Keep the work environment clean and safe to minimize the risk of workplace accidents.",
+      "Help achieve daily production targets by following instructions from on-site leaders."
+    ],
+    achievements: [
+      "Supported production processes to enable clients to meet their production deadlines.",
+      "Ensured smooth operations during staff absences at the production site."
+    ]
+  },
+  {
+    company: "PT Goodyear Indonesia. Tbk",
+    location: "Bogor",
+    position: "Production Operator",
+    period: "Jan 2022 - April 2024",
+    responsibilities: [
+      "Operated and maintained production machinery in accordance with operational standards and safety procedures.",
+      "Conducted regular inspections of machinery to ensure efficient production operations.",
+      "Managed workflow on the production line and assisted with daily data entry tasks.",
+      "Engaged in internal training programs to enhance technical skills and knowledge of safety protocols.",
+      "Worked with the team to identify production challenges and implement effective solutions."
+    ],
+    achievements: [
+      "Boosted productivity by 5-10% in line with daily targets.",
+      "Decreased machinery breakdown rates through thorough periodic inspections in accordance with SOP standards."
+    ]
+  },
+  {
+    company: "PT Goodyear Indonesia. Tbk",
+    location: "Bogor",
+    position: "Quality Technician",
+    type: "Internship",
+    period: "Mar 2023 – Jul 2023",
+    responsibilities: [
+      "Evaluated production data to assess the quality of processes and products.",
+      "Assisted in implementing quality management systems to ensure compliance with quality standards.",
+      "Helped update quality control procedures to enhance inspection efficiency.",
+      "Collaborated with the team to identify product defects and take corrective actions.",
+      "Compiled daily production quality reports and suggested improvements."
+    ],
+    achievements: [
+      "Reduced product defects by 5-10% through in-depth analysis and precise process improvements.",
+      "Accelerated the Quality Checking process by 15% through effective coordination and adherence to updated procedures."
+    ]
+  }
+];
