@@ -137,6 +137,25 @@
   transform: translateY(-2px);
 }
 
+.submit-button {
+  display: inline-block;
+  background-color: #bd63f9;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #a341f3;
+  transform: translateY(-2px);
+}
+
 .contact-whatsapp {
   margin-top: -20px;
   margin-bottom: 40px;
@@ -167,6 +186,20 @@
   width: 28px;
   height: 28px;
   fill: white;
+}
+
+.success-message {
+  color: #4CAF50;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
 }
 
 /* Media Queries */

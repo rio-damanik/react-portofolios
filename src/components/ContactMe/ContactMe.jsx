@@ -1,11 +1,53 @@
-import React from "react";
-import "./ContactMe.css"; // Import your stylesheet here
-
-// Import images from the src folder
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
+import "./ContactMe.css";
 import emailIcon from "../ContactMe/assestcontact/icon-email.png";
 import githubIcon from "../ContactMe/assestcontact/icon-github2.png";
 
 const ContactMe = () => {
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    emailjs.sendForm(
+      'service_wi4xfrc', // Service ID Anda
+      'template_x0baab5', // Ganti dengan Template ID yang Anda dapatkan dari Email Templates
+      form.current,
+      'NJh-8FjRl3cB3nDy7' // Ganti dengan Public Key yang Anda dapatkan dari Account > API Keys
+    )
+      .then((result) => {
+        console.log(result.text);
+        setStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+        console.log(error.text);
+        setStatus('error');
+      });
+  };
+
   return (
     <section id="contact" className="contact-container">
       <h2 className="section-title">
@@ -39,24 +81,55 @@ const ContactMe = () => {
         {/* Contact Form */}
         <div className="contact-form">
           <h3>Contact Form</h3>
-          <form action="mailto:example@example.com" method="post" encType="text/plain">
+          <form ref={form} onSubmit={sendEmail}>
             <label>
               First Name:
-              <input type="text" name="firstName" required />
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
             </label>
             <label>
               Last Name:
-              <input type="text" name="lastName" required />
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
             </label>
             <label>
               Email:
-              <input type="email" name="email" required />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
             </label>
             <label>
               Message:
-              <textarea name="message" rows="5" required></textarea>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              />
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit" className="submit-button">
+              {status === 'sending' ? 'Sending...' : 'Send Message'}
+            </button>
+            {status === 'success' && (
+              <p className="success-message">Message sent successfully!</p>
+            )}
+            {status === 'error' && (
+              <p className="error-message">Failed to send message. Please try again.</p>
+            )}
           </form>
         </div>
       </div>
