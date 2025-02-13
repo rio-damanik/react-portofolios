@@ -34,7 +34,7 @@ const ProjectMe = () => {
   ];
 
   return (
-    <section className="projects-section">
+    <section id="projects" className="projects-section">
       <div className="projects-container">
         <h1 className="section-title">
           My Recent <span className="purple">Works</span>

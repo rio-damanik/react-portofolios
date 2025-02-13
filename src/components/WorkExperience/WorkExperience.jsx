@@ -31,7 +31,7 @@ const WorkExperience = () => {
   };
 
   return (
-    <section className="experience-section">
+    <section id="experience" className="experience-section">
       <h2 className="section-title">
         Work <span className="purple">Experience</span>
       </h2>
