@@ -183,8 +183,7 @@
   color: #ffd700;
 }
 
-
-
+/* Media Queries for responsive design */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
@@ -194,7 +193,7 @@
 
   .slider-container {
     padding: 0 20px;
-    width: 90%;
+    width: 80%;
   }
 
   .timeline-item {
@@ -252,5 +251,72 @@
   .work-experience-container {
     width: 100%; /* Set width to 100% on smaller screens */
     padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 300px) {
+  .experience-section {
+    padding: 30px 10px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .timeline {
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .timeline-item {
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+
+  .timeline-content {
+    padding: 8px;
+  }
+
+  .timeline-date {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .timeline-title {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .timeline-company {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+
+  .timeline-description {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .timeline-tech {
+    margin-top: 6px;
+    gap: 4px;
+  }
+
+  .tech-tag {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+  }
+
+  .timeline-line {
+    left: 6px;
+    width: 2px;
   }
 }
