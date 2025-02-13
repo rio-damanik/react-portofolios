@@ -1,94 +1,87 @@
 import React from "react";
-import "./ProjectMe.css"; // Ensure this path is correct
+import "./ProjectMe.css";
 
 const ProjectMe = () => {
+  const projects = [
+    {
+      title: "Aplikasi Kasir",
+      description: "This Fullstack Cashier application for food and beverages is designed to simplify the operations of culinary businesses, such as restaurants, cafes, or food stalls. It integrates key features such as ordering, payment, and menu management in one platform. Cashiers can easily take orders, whether for dine-in, takeaway, or delivery. Menu management becomes practical with the features of adding, editing, and deleting menu data.",
+      image: "/kasir.png",
+      github: "https://github.com/rio-damanik/aplikasi_kasir-Mern",
+      demo: "#",
+      tech: ["React.JS", "MongoDB", "Express.js", "Node.js"],
+      date: "Dec 2024"
+    },
+    {
+      title: "Personal Portfolio Website",
+      description: "A portfolio showcasing skills and projects, built using React.js as the frontend.",
+      image: "/portfolio.png",
+      github: "#",
+      demo: "https://riodamanik.vercel.app",
+      tech: ["React.js"],
+      date: "2024"
+    },
+    {
+      title: "Mini Project - Fundamental Course",
+      description: "A beginner-friendly project developed during the RevoU Fundamental Course in Software Engineering. This project focused on building a basic responsive website using HTML and CSS.",
+      image: "/miniproject.png",
+      github: "#",
+      demo: "#",
+      tech: ["HTML", "CSS", "JavaScript"],
+      date: "April 2024",
+      certificate: "RevoU Certificate"
+    }
+  ];
+
   return (
-    <section id="project-me" className="project-me-container">
-      <div className="container">
-        <h3 className="pre-title">My Work</h3>
-        <h1 className="section-title">Featured Portfolio</h1>
+    <section className="projects-section">
+      <div className="projects-container">
+        <h1 className="section-title">
+          My Recent <span className="purple">Works</span>
+        </h1>
+        <p className="section-subtitle">
+          Here are a few projects I've worked on recently.
+        </p>
 
-        <div className="row">
-          {/* PORTFOLIO 1 */}
-          <div className="col-md-4 mb-4">
-            <div className="portfolio-item card">
-              <div className="portfolio-cover card-img-top">
-                <img src="assets/portfolio1.png" alt="portfolio 1" className="img-fluid" />
+        <div className="projects-grid">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <div className="laptop-frame">
+                <div className="laptop-screen">
+                  <img src={project.image} alt={project.title} />
+                </div>
               </div>
-              <div className="portfolio-info card-body">
-                <div className="portfolio-title d-flex justify-content-between align-items-center">
-                  <h4 className="card-title">Agency Website</h4>
-                  <a href="/" className="portfolio-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                      <path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z" />
-                    </svg>
-                  </a>
+              <div className="project-content">
+                <div className="project-header">
+                  <h3 className="project-title">{project.title}</h3>
+                  <span className="project-date">{project.date}</span>
                 </div>
-                <div className="portfolio-tags mb-3">
-                  <span className="badge bg-secondary">HTML</span>
-                  <span className="badge bg-secondary">CSS</span>
+                <p className="project-description">{project.description}</p>
+                <div className="tech-stack">
+                  {project.tech.map((tech, techIndex) => (
+                    <span key={techIndex} className="tech-tag">{tech}</span>
+                  ))}
                 </div>
-                <p className="card-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem earum nisi vero nam pariatur culpa quod aspernatur recusandae officiis commodi numquam, distinctio quos, sed asperiores, cumque iste? Laboriosam,
-                  tenetur mollitia!
-                </p>
+                <div className="project-links">
+                  {project.github !== "#" && (
+                    <a href={project.github} className="btn btn-github" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  )}
+                  {project.demo !== "#" && (
+                    <a href={project.demo} className="btn btn-demo" target="_blank" rel="noopener noreferrer">
+                      Demo
+                    </a>
+                  )}
+                  {project.certificate && (
+                    <a href="#" className="btn btn-certificate" target="_blank" rel="noopener noreferrer">
+                      Certificate
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* PORTFOLIO 2 */}
-          <div className="col-md-4 mb-4">
-            <div className="portfolio-item card">
-              <div className="portfolio-cover card-img-top">
-                <img src="assets/portfolio2.png" alt="portfolio 2" className="img-fluid" />
-              </div>
-              <div className="portfolio-info card-body">
-                <div className="portfolio-title d-flex justify-content-between align-items-center">
-                  <h4 className="card-title">Landing Page</h4>
-                  <a href="/" className="portfolio-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                      <path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z" />
-                    </svg>
-                  </a>
-                </div>
-                <div className="portfolio-tags mb-3">
-                  <span className="badge bg-secondary">HTML</span>
-                  <span className="badge bg-secondary">CSS</span>
-                </div>
-                <p className="card-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem earum nisi vero nam pariatur culpa quod aspernatur recusandae officiis commodi numquam, distinctio quos, sed asperiores, cumque iste? Laboriosam,
-                  tenetur mollitia!
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* PORTFOLIO 3 */}
-          <div className="col-md-4 mb-4">
-            <div className="portfolio-item card">
-              <div className="portfolio-cover card-img-top">
-                <img src="assets/portfolio3.png" alt="portfolio 3" className="img-fluid" />
-              </div>
-              <div className="portfolio-info card-body">
-                <div className="portfolio-title d-flex justify-content-between align-items-center">
-                  <h4 className="card-title">Coming Soon</h4>
-                  <a href="/" className="portfolio-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                      <path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z" />
-                    </svg>
-                  </a>
-                </div>
-                <div className="portfolio-tags mb-3">
-                  <span className="badge bg-secondary">HTML</span>
-                  <span className="badge bg-secondary">CSS</span>
-                </div>
-                <p className="card-text">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem earum nisi vero nam pariatur culpa quod aspernatur recusandae officiis commodi numquam, distinctio quos, sed asperiores, cumque iste? Laboriosam,
-                  tenetur mollitia!
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
