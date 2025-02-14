@@ -65,6 +65,7 @@ export const WORK_EXPERIENCE = [
     company: "PT Goodyear Indonesia. Tbk",
     location: "Bogor",
     position: "Production Operator",
+    type: "Internship",
     period: "Jan 2022 - April 2024",
     responsibilities: [
       "Operated and maintained production machinery in accordance with operational standards and safety procedures.",
