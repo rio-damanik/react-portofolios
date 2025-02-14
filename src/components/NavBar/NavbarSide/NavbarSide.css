@@ -1,111 +1,117 @@
 .navbar-side {
   position: fixed;
-  top: 0;
+  top: -100%; /* Start off-screen above */
   left: 0;
-  width: 250px;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(10px);
-  z-index: 999;
-  padding: 2rem 1rem;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-  margin-top: 70px;
+  width: 100%; /* Reduced width */
+  max-width: 230px; /* Maximum width */
+  height: 100%; /* Full height */
+  background-color: rgb(26, 158, 136);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  padding: 10px; /* Reduced padding */
+  z-index: 999;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0); /* Default position */
+  opacity: 0; /* Default opacity */
 }
 
 .navbar-side.open {
-  transform: translateX(0);
+  top: 0; /* Slide in from the top */
+  opacity: 1; /* Full opacity when open */
 }
 
 .navbar-logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 10px; /* Reduced space below the logo */
 }
 
 .logo-image {
-  height: 40px;
-  width: auto;
+  height: 40px; /* Reduced height */
+  width: auto; /* Maintain aspect ratio */
 }
 
 .navbar-side-menu {
   list-style: none;
   padding: 0;
   margin: 0;
-  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align menu items */
 }
 
 .navbar-side-menu li {
-  margin: 1.5rem 0;
+  margin-bottom: 10px; /* Reduced margin between items */
+  width: 100%; /* Full width for hover effect */
 }
 
 .navbar-side-menu a {
   color: white;
+  font-size: 1rem; /* Reduced font size */
   text-decoration: none;
-  font-size: 1.1rem;
-  display: block;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-  position: relative;
+  text-align: center;
+  display: block; /* Ensure the link takes up the full width of the list item */
+  padding: 8px; /* Reduced padding for better fit */
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-.navbar-side-menu a:hover,
-.navbar-side-menu a.active-link {
-  color: #bd63f9;
+.navbar-side-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Change background on hover */
 }
 
-.navbar-side-menu a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 1rem;
-  width: 0;
-  height: 2px;
-  background: #bd63f9;
-  transition: width 0.3s ease;
-}
-
-.navbar-side-menu a:hover::after,
-.navbar-side-menu a.active-link::after {
-  width: calc(100% - 2rem);
-}
-
-.hire-me-button-side {
-  background: linear-gradient(45deg, #bd63f9, #8a2be2);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin: 2rem auto;
-  width: 80%;
-  box-shadow: 0 4px 15px rgba(189, 99, 249, 0.3);
-  position: relative;
-  bottom: 0;
-}
-
-.hire-me-button-side:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(189, 99, 249, 0.4);
-  background: linear-gradient(45deg, #8a2be2, #bd63f9);
-}
-
-.hire-me-button-side:active {
-  transform: translateY(1px);
+.navbar-side-menu a.active {
+  background-color: rgba(255, 255, 255, 0.5); /* Highlight active link */
 }
 
 .hire-me-btn {
   background-color: #148ea3;
   color: white;
-  padding: 8px 16px;
+  padding: 8px 16px; /* Reduced size for emphasis */
   border-radius: 5px;
-  border: none;
+  text-decoration: none;
+  margin-top: auto; /* Push the button to the bottom */
+  font-size: 1rem; /* Adjust font size */
+}
+
+.close-btn {
+  background: #e90000;
+  border: 1px solid black;
+  color: white;
+  width: 40px; /* Reduced width */
+  height: 40px; /* Reduced height */
+  font-size: 1.5rem; /* Reduced font size */
+  cursor: pointer;
+
+  top: 10px; /* Reduced space from top */
+  right: 10px; /* Reduced space from right */
+}
+
+.navbar-side-menu a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 8px;
+  transition: background-color 0.3s ease, padding 0.3s ease, color 0.3s ease;
+}
+
+.navbar-side-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* New class for active link */
+.navbar-side-menu a.active-link {
+  color: #0f7c8b; /* Change text color when the link is active */
+  background-color: rgba(255, 255, 255, 0.5); /* Optional background change */
+}
+
+.hire-me-btn {
+  background-color: #148ea3;
+  color: white;
+  padding: 8px 16px; /* Ukuran yang lebih besar */
+  border-radius: 5px;
+  border: none; /* Hapus border default button */
   text-decoration: none;
   margin-top: auto;
   font-size: 1rem;
@@ -115,35 +121,10 @@
 }
 
 .hire-me-btn:hover {
-  background-color: #0f7c8b;
+  background-color: #0f7c8b; /* Warna hover */
 }
 
 .hire-me-btn.active-link {
-  color: rgb(26, 142, 172);
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 40px;
-  height: 40px;
-  background: rgba(189, 99, 249, 0.1);
-  border: 2px solid rgba(189, 99, 249, 0.3);
-  border-radius: 8px;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.close-btn:hover {
-  color: #bd63f9;
-  background: rgba(189, 99, 249, 0.2);
-  border-color: #bd63f9;
-  transform: rotate(90deg);
+  color: rgb(26, 142, 172); /* Warna teks ketika aktif */
+  background-color: rgba(255, 255, 255, 0.5); /* Latar belakang saat aktif */
 }
