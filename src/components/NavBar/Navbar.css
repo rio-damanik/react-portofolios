@@ -98,6 +98,7 @@ html {
   transition: all 0.3s ease;
   margin-left: 1rem;
   box-shadow: 0 4px 15px rgba(189, 99, 249, 0.3);
+  margin-right: 40px;
 }
 
 .hire-me-button:hover {
