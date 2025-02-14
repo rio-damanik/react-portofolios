@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './TextWrapper.css';
 
 const TextWrapper = () => {
   const [displayedWord, setDisplayedWord] = useState('');
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 
-  const phrases = [
+  const phrases = useMemo(() => [
     {
       prefix: "Experienced In ",
       word: "Manufacturing",
@@ -16,35 +16,35 @@ const TextWrapper = () => {
       word: "Developer",
       type: "purple"
     }
-  ];
+  ], []);
+
+  const typeNextChar = useCallback((charIndex, currentPhrase, timeoutId) => {
+    if (charIndex <= currentPhrase.word.length) {
+      setDisplayedWord(currentPhrase.word.slice(0, charIndex));
+      timeoutId.current = setTimeout(() => {
+        typeNextChar(charIndex + 1, currentPhrase, timeoutId);
+      }, 300);
+    } else {
+      // Wait 2 seconds before switching to next phrase
+      timeoutId.current = setTimeout(() => {
+        setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
+        setDisplayedWord('');
+      }, 2000);
+    }
+  }, [phrases.length]);
 
   useEffect(() => {
-    let timeoutId;
+    const timeoutId = { current: null };
     const currentPhrase = phrases[currentPhraseIndex];
-    let charIndex = 0;
-
-    const typeNextChar = () => {
-      if (charIndex <= currentPhrase.word.length) {
-        setDisplayedWord(currentPhrase.word.slice(0, charIndex));
-        charIndex++;
-        timeoutId = setTimeout(typeNextChar, 1000);
-      } else {
-        // Wait 3 seconds before switching to next phrase
-        timeoutId = setTimeout(() => {
-          setCurrentPhraseIndex((prev) => (prev + 1) % phrases.length);
-          setDisplayedWord('');
-        }, 3000);
-      }
-    };
-
-    typeNextChar();
+    
+    typeNextChar(0, currentPhrase, timeoutId);
 
     return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
       }
     };
-  }, [currentPhraseIndex]);
+  }, [currentPhraseIndex, typeNextChar, phrases]);
 
   const currentPhrase = phrases[currentPhraseIndex];
 

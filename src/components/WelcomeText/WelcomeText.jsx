@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './WelcomeText.css';
 
 const WelcomeText = () => {
@@ -8,36 +8,34 @@ const WelcomeText = () => {
   const fullText = welcomeText + highlightText;
 
   // Timing constants in milliseconds
-  const CHAR_DELAY = 300;  // 0.5 seconds between characters
+  const CHAR_DELAY = 300;  // 0.3 seconds between characters
   const PHRASE_DELAY = 2000;  // 2 seconds between phrases
 
+  const typeText = useCallback((charIndex, timeoutId) => {
+    if (charIndex <= fullText.length) {
+      setDisplayedText(fullText.slice(0, charIndex));
+      timeoutId.current = setTimeout(() => {
+        typeText(charIndex + 1, timeoutId);
+      }, CHAR_DELAY);
+    } else {
+      // Reset after delay
+      timeoutId.current = setTimeout(() => {
+        setDisplayedText('');
+        typeText(0, timeoutId);
+      }, PHRASE_DELAY);
+    }
+  }, [fullText, CHAR_DELAY, PHRASE_DELAY]);
+
   useEffect(() => {
-    let timeoutId;
-    let charIndex = 0;
-
-    const typeNextChar = () => {
-      if (charIndex <= fullText.length) {
-        setDisplayedText(fullText.slice(0, charIndex));
-        charIndex++;
-        timeoutId = setTimeout(typeNextChar, CHAR_DELAY);
-      } else {
-        // Reset after 2 seconds
-        timeoutId = setTimeout(() => {
-          charIndex = 0;
-          setDisplayedText('');
-          typeNextChar();
-        }, PHRASE_DELAY);
-      }
-    };
-
-    typeNextChar();
+    const timeoutId = { current: null };
+    typeText(0, timeoutId);
 
     return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current);
       }
     };
-  }, []);
+  }, [typeText]);
 
   const renderText = () => {
     const displayedNormalText = displayedText.slice(0, welcomeText.length);
