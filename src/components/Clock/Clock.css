@@ -15,6 +15,7 @@
   backdrop-filter: blur(8px);
   box-shadow: 0 8px 32px rgba(189, 99, 249, 0.2);
   transition: transform 0.3s ease;
+  max-width: 90%;
 }
 
 .clock-container:hover {
@@ -38,6 +39,7 @@
   align-items: center;
   gap: 15px;
   margin: 15px 0;
+  white-space: nowrap;
 }
 
 .time-unit {
@@ -86,4 +88,107 @@
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .clock-container {
+    padding: 15px 30px;
+  }
+  
+  .day {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+
+  .time-value {
+    font-size: 2.5rem;
+    min-width: 60px;
+  }
+
+  .time-separator {
+    font-size: 2.5rem;
+  }
+
+  .time-unit {
+    min-width: 70px;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .clock-container {
+    padding: 12px 20px;
+  }
+
+  .day {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .time-container {
+    gap: 8px;
+  }
+
+  .time-value {
+    font-size: 1.8rem;
+    min-width: 45px;
+    padding: 8px;
+  }
+
+  .time-separator {
+    font-size: 1.8rem;
+  }
+
+  .time-unit {
+    min-width: 45px;
+  }
+
+  .time-label {
+    font-size: 0.7rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .clock-container {
+    padding: 10px 15px;
+  }
+
+  .day {
+    font-size: 0.9rem;
+  }
+
+  .time-container {
+    gap: 5px;
+  }
+
+  .time-value {
+    font-size: 1.5rem;
+    min-width: 35px;
+    padding: 6px;
+  }
+
+  .time-separator {
+    font-size: 1.5rem;
+  }
+
+  .time-unit {
+    min-width: 35px;
+  }
+
+  .time-label {
+    font-size: 0.6rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
 }
