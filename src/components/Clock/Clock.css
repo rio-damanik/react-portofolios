@@ -10,12 +10,13 @@
   background: rgba(189, 99, 249, 0.1);
   border: 1px solid rgba(189, 99, 249, 0.3);
   border-radius: 20px;
-  padding: 20px 40px;
+  padding: 20px;
   text-align: center;
   backdrop-filter: blur(8px);
   box-shadow: 0 8px 32px rgba(189, 99, 249, 0.2);
   transition: transform 0.3s ease;
-  max-width: 90%;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .clock-container:hover {
@@ -34,12 +35,15 @@
 }
 
 .time-container {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  margin: 15px 0;
+  margin: 15px auto;
   white-space: nowrap;
+  background: rgba(189, 99, 249, 0.05);
+  padding: 15px 25px;
+  border-radius: 15px;
 }
 
 .time-unit {
@@ -47,6 +51,9 @@
   flex-direction: column;
   align-items: center;
   min-width: 80px;
+  background: rgba(189, 99, 249, 0.1);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .time-value {
@@ -54,10 +61,7 @@
   font-weight: 700;
   color: #bd63f9;
   text-shadow: 0 0 15px rgba(189, 99, 249, 0.5);
-  background: rgba(189, 99, 249, 0.1);
-  padding: 10px;
-  border-radius: 12px;
-  min-width: 70px;
+  line-height: 1;
 }
 
 .time-label {
@@ -75,6 +79,7 @@
   color: #bd63f9;
   margin-top: -10px;
   animation: pulse 1s infinite;
+  line-height: 1;
 }
 
 .date {
@@ -93,9 +98,19 @@
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .clock-container {
-    padding: 15px 30px;
+    padding: 15px;
   }
   
+  .time-container {
+    padding: 12px 20px;
+    gap: 12px;
+  }
+
+  .time-unit {
+    min-width: 70px;
+    padding: 8px;
+  }
+
   .day {
     font-size: 1.25rem;
     letter-spacing: 2px;
@@ -103,15 +118,10 @@
 
   .time-value {
     font-size: 2.5rem;
-    min-width: 60px;
   }
 
   .time-separator {
     font-size: 2.5rem;
-  }
-
-  .time-unit {
-    min-width: 70px;
   }
 
   .date {
@@ -121,7 +131,17 @@
 
 @media screen and (max-width: 400px) {
   .clock-container {
-    padding: 12px 20px;
+    padding: 12px;
+  }
+
+  .time-container {
+    padding: 10px 15px;
+    gap: 8px;
+  }
+
+  .time-unit {
+    min-width: 55px;
+    padding: 6px;
   }
 
   .day {
@@ -129,22 +149,12 @@
     letter-spacing: 1px;
   }
 
-  .time-container {
-    gap: 8px;
-  }
-
   .time-value {
     font-size: 1.8rem;
-    min-width: 45px;
-    padding: 8px;
   }
 
   .time-separator {
     font-size: 1.8rem;
-  }
-
-  .time-unit {
-    min-width: 45px;
   }
 
   .time-label {
@@ -159,29 +169,29 @@
 
 @media screen and (max-width: 300px) {
   .clock-container {
-    padding: 10px 15px;
+    padding: 10px;
+  }
+
+  .time-container {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+
+  .time-unit {
+    min-width: 45px;
+    padding: 4px;
   }
 
   .day {
     font-size: 0.9rem;
   }
 
-  .time-container {
-    gap: 5px;
-  }
-
   .time-value {
     font-size: 1.5rem;
-    min-width: 35px;
-    padding: 6px;
   }
 
   .time-separator {
     font-size: 1.5rem;
-  }
-
-  .time-unit {
-    min-width: 35px;
   }
 
   .time-label {
