@@ -2,12 +2,14 @@ import React from "react";
 import "./Hero.css";
 import TextWrapper from "../TextWrapper/TextWrapper";
 import WelcomeText from "../WelcomeText/WelcomeText";
+import Clock from "../Clock/Clock";
 
 const Hero = () => {
   return (
     <section id="hero" className="hero-container">
       {/* ID ditambahkan di sini */}
       <div className="hero-content">
+        <Clock />
         <WelcomeText />
         <h3>
           "Semua orang di negara ini harus belajar memprogram komputer karena komputer mengajarkan Anda cara berpikir.” <br></br> – Steve Jobs

@@ -1,0 +1,89 @@
+.clock-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.clock-container {
+  background: rgba(189, 99, 249, 0.1);
+  border: 1px solid rgba(189, 99, 249, 0.3);
+  border-radius: 20px;
+  padding: 20px 40px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(189, 99, 249, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.clock-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(189, 99, 249, 0.3);
+}
+
+.day {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.time-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.time-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #bd63f9;
+  text-shadow: 0 0 15px rgba(189, 99, 249, 0.5);
+  background: rgba(189, 99, 249, 0.1);
+  padding: 10px;
+  border-radius: 12px;
+  min-width: 70px;
+}
+
+.time-label {
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.8;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.time-separator {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #bd63f9;
+  margin-top: -10px;
+  animation: pulse 1s infinite;
+}
+
+.date {
+  font-size: 1.1rem;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
