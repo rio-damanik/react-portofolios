@@ -1,0 +1,33 @@
+.text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  margin: 20px 0;
+}
+
+.text-content {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  color: white;
+  min-height: 2em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.prefix-text {
+  color: white;
+}
+
+.highlight-purple {
+  color: #bd63f9;
+  font-weight: 700;
+}
+
+.highlight-teal {
+  color: #20B2AA;
+  font-weight: 700;
+}

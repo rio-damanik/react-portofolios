@@ -1,0 +1,43 @@
+.welcome-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 40px;
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.welcome-content {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  white-space: nowrap;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-normal {
+  color: white;
+}
+
+.welcome-highlight {
+  color: #bd63f9;
+  margin-left: 8px;  /* Added spacing before PORTOFOLIO */
+}
+
+.cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.5em;
+  background-color: #bd63f9;
+  margin-left: 2px;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { opacity: 0 }
+  50% { opacity: 1 }
+}
